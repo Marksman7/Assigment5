@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string>
+
+
+int ar[] = { 1, 2, 3, 4, 5, 6};
+
+int HowmanyFives = 0;
+
+
+int main()
+{
+	for (int o = 0; o < 6; o++)
+	{
+		std::cout << ar[o];
+		std::cout << ", ";
+	}
+
+	std::cout << "\n";
+
+	for (int i = 0; i < 6; i++)
+	{
+		for (int j = 0; j < 6; j++)
+		{
+			if ((ar[i] + ar[j]) % 5 == 0)
+			{
+				HowmanyFives = HowmanyFives + 1;
+				//std::cout << ar[i], ", " , ar[j] , "\n";
+			}
+		}
+	}
+
+	std::cout << "There are ";
+	std::cout << HowmanyFives;
+	std::cout << " combiantion divisualbe by 5 from the list of 6 numbers\n";
+
+}
