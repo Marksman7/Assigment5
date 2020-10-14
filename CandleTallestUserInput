@@ -1,0 +1,73 @@
+#include <iostream>
+#include <string>
+
+
+std::string Candles[] = { "4", "4", "2", "3" };
+
+std::string ChooseCandles = "";
+
+int HowManyTall = 0;
+
+int Longth = 0;
+
+int main()
+{
+    //Counting();
+
+    
+
+    std::cout << "type in candle inch for each individual Candles with the sizes 1,2,3,4 or an default will be provided for you 4 year old" << std::endl;
+
+    for (int a = 0; a < 4; a++)
+    {
+        std::cin >> ChooseCandles ;
+        if (ChooseCandles != "" && (ChooseCandles == "1" || ChooseCandles == "2" || ChooseCandles == "3" || ChooseCandles == "4"))
+        {
+            Candles[a] = ChooseCandles;
+        }
+        else
+        {
+            a = 130;
+        }
+        std::cout << ", " << std::endl;
+    }
+
+    for (int j = 0; j < 4; j++)
+    {
+        if (Candles[j] != "" && (Candles[j] == "1" || Candles[j] == "2" || Candles[j] == "3" || Candles[j] == "4"))
+        {
+            Longth = Longth + 1;
+        }
+        else
+        {
+            j = 130;
+        }
+
+    }
+
+    std::cout << "List of the candles are" << std::endl;
+
+    for (int o = 0; o < Longth; o++)
+    {
+        std::cout << ", " + Candles[o];
+
+    }
+
+    std::cout << "\n";
+
+    for (int i = 0; i < Longth; i++)
+    {
+        if (Candles[i] == "4")
+        {
+            HowManyTall = HowManyTall + 1;
+        }
+    }
+
+    std::cout << "out of the ";
+    std::cout << Longth;
+    std::cout << " Candles there are ";
+    std::cout << HowManyTall;
+    std::cout << " that messure up to 4 inchs\n" << std::endl;
+
+
+}
